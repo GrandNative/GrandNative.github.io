@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- bootstrap -->
+    <link rel="stylesheet" href="./assets/bootstrap/css/bootstrap.min.css" />
+
+    <!-- my css -->
+    <link rel="stylesheet" href="./style.css" />
+    <title>my bussiness company</title>
+  </head>
+  <body>
+    <!-- header -->
+    <header>
+      <nav class="nvabar navbar-expand-lg fixed-top">
+        <ul class="navbar-nav justify-content-center">
+          <li class="nav-item"><button class="nav-link" onclick="nav1()">home</button></li>
+          <li class="nav-item"><button class="nav-link" onclick="nav2()">about</button></li>
+          <li class="nav-item"><button class="nav-link" onclick="nav3()">contact</button></li>
+        </ul>
+      </nav>
+    </header>
+    <!-- hero -->
+    <section id="hero">
+      <div class="container">
+        <div class="row">
+          <div class="col-4"></div>
+          <div id="heroText" class="col-4 text-center">
+            <h1>hello world</h1>
+            <h6>Lorem ipsum dolor sit.</h6>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta
+              voluptates nemo autem?
+            </p>
+            <button class="hovers" id="btn1">yes</button>
+            <button class="hovers" id="btn2">yes</button>
+          </div>
+          <div class="col-4"></div>
+        </div>
+      </div>
+    </section>
+    <!-- describe -->
+    <section id="describe">
+      <div>
+        <button id="dot1" onclick="dot1f()" class="dot"></button>
+        <button id="dot2" onclick="dot2f()" class="dot"></button>
+        <button id="dot3" onclick="dot3f()" class="dot"></button>
+      </div>
+      <div class="container">
+        <div class="row">
+          <div id="describeTitle" class="col-6 mt-5">
+            <h1 id="t1">the title of site</h1>
+          </div>
+          <div id="describeText" class="col-6 mt-5">
+            <h2 id="t2">hello world</h2>
+            <p id="p1">
+              Lorem ipsum dolor sit amet consectetur adipisicing eli
+            </p>
+            <p id="p2">
+              Lorem ipsum dolor sit amet consectetur adipisicing eli
+            </p>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-4">
+            <img
+              class="img-fluid describe-img"
+              src="./assets/pics/bg.jpg"
+              alt=""
+            />
+          </div>
+          <div class="col-4">
+            <img
+              class="img-fluid describe-img"
+              src="./assets/pics/bg.jpg"
+              alt=""
+            />
+          </div>
+          <div class="col-4">
+            <img
+              class="img-fluid describe-img"
+              src="./assets/pics/bg.jpg"
+              alt=""
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- contact -->
+    <section id="contact">
+      <div class="spacer"></div>
+      <div id="formdiv">
+        <form id="form" action="">
+          <h1>contact us</h1>
+          <input id="email" class="inputs" type="email" placeholder="email">
+          <input id="message" class="inputs" type="text" placeholder="message">
+          <button id="submit">submit</button>
+        </form>
+      </div>
+    </section>
+    <!-- js -->
+    <script>
+      // calling
+      let btn1 = document.getElementById("btn1");
+      let btn2 = document.getElementById("btn2");
+      let hero = document.getElementById("hero");
+      let dog = document.getElementById("dog");
+      let cat = document.getElementById("cat");
+      // hero section hover animation
+      btn1.addEventListener("mouseenter", function () {
+        document.getElementById("hero").style.backgroundImage =
+          "url(./assets/pics/btn1bg.gif)";
+      });
+      btn1.addEventListener("mouseleave", function () {
+        document.getElementById("hero").style.backgroundImage =
+          "url(./assets/pics/normal.gif)";
+      });
+      btn2.addEventListener("mouseenter", function () {
+        document.getElementById("hero").style.backgroundImage =
+          "url(./assets/pics/btn2bg.gif)";
+      });
+      btn2.addEventListener("mouseleave", function () {
+        document.getElementById("hero").style.backgroundImage =
+          "url(./assets/pics/normal.gif)";
+      });
+      // .......................................
+      //describe animation
+      // calling
+      let dot1 = document.getElementById("dot1");
+      let dot2 = document.getElementById("dot2");
+      let dot3 = document.getElementById("dot3");
+      let describe = document.getElementById("describe");
+      let t1 = document.getElementById("t1");
+      let t2 = document.getElementById("t2");
+      let p1 = document.getElementById("p1");
+      let p2 = document.getElementById("p2");
+
+      function dot1f() {
+        setTimeout(function () {
+          describe.style.animationName = "trans";
+          describe.style.animationDuration = "0.5s";
+          describe.style.animtationIterationCount = "1";
+          describe.style.backgroundColor = "#4b6d85";
+          t1.innerText = "the title of site";
+          t2.innerText = "hello world";
+          p1.innerText =
+            'Lorem ipsum dolor sit amet consectetur adipisicing eli';
+          p2.innerText =
+            "Lorem ipsum dolor sit amet consectetur adipisicing eli";
+        }, 100);
+        console.log("worked1");
+      }
+      function dot2f() {
+        setTimeout(function () {
+          describe.style.animationName = "trans2";
+          describe.style.animationDuration = "0.5s";
+          describe.style.animtationIterationCount = "1";
+          describe.style.backgroundColor = "#750a75";
+          t1.innerText = "new text title";
+          t2.innerText = "hello world";
+          p1.innerText =
+            "so this is the new section as you can see babe yeah its cool";
+          p2.innerText =
+            "so this is the new section as you can see babe yeah its cool too";
+        }, 100);
+        console.log("worked1");
+      }
+      function dot3f() {
+        setTimeout(function () {
+          describe.style.animationName = "trans3";
+          describe.style.animationDuration = "0.5s";
+          describe.style.animtationIterationCount = "1";
+          describe.style.backgroundColor = "#ff55c6";
+          t1.innerText = "new text title";
+          t2.innerText = "i fucking did it";
+          p1.innerText =
+            "so this is the new section as you can see babe yeah its cool";
+          p2.innerText =
+            "so this is the new section as you can see babe yeah its cool too";
+        }, 100);
+        console.log("worked1");
+      }
+      // ........................................
+      // navbar
+      let contact = document.getElementById("contact");
+      function nav1(){ 
+          hero.style.display='block';
+          describe.style.display='none'
+          contact.style.display='none' 
+          hero.style.animationName = "in";
+          hero.style.animationDuration = "1s";
+          hero.style.animtationIterationCount = "1";
+      }
+      function nav2(){ 
+        describe.style.display='block';
+          hero.style.display='none'
+          contact.style.display='none' 
+          describe.style.animationName = "in";
+          describe.style.animationDuration = "1s";
+          describe.style.animtationIterationCount = "1";
+      }
+      function nav3(){ 
+        contact.style.display='block';
+          describe.style.display='none'
+          hero.style.display='none' 
+          contact.style.animationName = "in";
+          contact.style.animationDuration = "1s";
+          contact.style.animtationIterationCount = "1";
+      }
+    </script>
+  </body>
+</html>
